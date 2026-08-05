@@ -67,3 +67,89 @@ The HRMS database consists of the following primary business entities.
 
 - Audit Log
 - System Configuration
+
+# 2. Entity Relationships
+
+The following relationships define how the primary business entities are connected.
+
+## Organization Structure
+
+Company
+└── Business Unit
+    └── Department
+        └── Designation
+
+Location
+└── Employee
+
+Department
+└── Employee
+
+Designation
+└── Employee
+
+---
+
+## Employee Relationships
+
+Employee
+├── Employment History
+├── Employee Document
+├── Emergency Contact
+├── Attendance Record
+├── Leave Request
+├── Leave Balance
+└── Notification
+
+Employee
+└── Manager (Self Relationship)
+
+---
+
+## Attendance
+
+Shift
+└── Attendance Record
+
+Attendance Record
+└── Attendance Regularization
+
+---
+
+## Leave
+
+Leave Type
+└── Leave Request
+
+Leave Type
+└── Leave Balance
+
+Holiday Calendar
+└── Leave Request
+
+---
+
+## Recruitment
+
+Job Opening
+└── Candidate
+
+Candidate
+├── Interview
+└── Offer
+
+Interview
+└── Interview Feedback
+
+---
+
+## Security
+
+Role
+└── User
+
+User
+└── Permission
+
+User
+└── Audit Log
