@@ -1,0 +1,69 @@
+# Database Design
+
+## Purpose
+
+This document defines the logical data model for the HRMS platform.
+
+The design will progress from business entities to relationships, then attributes, and finally the physical PostgreSQL schema.
+
+---
+
+# 1. Business Entities
+
+The HRMS database consists of the following primary business entities.
+
+## Organization
+
+- Company
+- Business Unit
+- Department
+- Designation
+- Location
+
+## Employee Management
+
+- Employee
+- Employee Document
+- Employment History
+- Emergency Contact
+
+## Attendance
+
+- Shift
+- Attendance Record
+- Attendance Regularization
+
+## Leave
+
+- Leave Type
+- Leave Balance
+- Leave Request
+- Holiday Calendar
+
+## Recruitment
+
+- Job Opening
+- Candidate
+- Interview
+- Interview Feedback
+
+## Offer Management
+
+- Offer
+- Offer Approval
+
+## Security
+
+- User
+- Role
+- Permission
+
+## Communication
+
+- Notification
+- Email Queue
+
+## System
+
+- Audit Log
+- System Configuration
